@@ -3,7 +3,7 @@
  *   global configuration, setup and settings
  *
  *   (c) 2012-2022 by Markus Reschke
- *   based on code from Markus Frejek and Karl-Heinz Kübbeler
+ *   based on code from Markus Frejek and Karl-Heinz Kï¿½bbeler
  *
  * ************************************************************************ */
 
@@ -54,7 +54,7 @@
  *  - this is used by the detection of the rotary encoder's turning velocity
  *  - it doesn't have to match exactly and also allows you to finetune the
  *    the feedback (higher: slow down, lower: speed up)
- *  - typical values: 20, 24 or 30 
+ *  - typical values: 20, 24 or 30
  *  - adjust value to match your rotary encoder
  */
 
@@ -80,7 +80,7 @@
  *    reference
  */
 
-//#define HW_REF25
+#define HW_REF25
 
 
 /*
@@ -118,7 +118,7 @@
 
 /*
  *  non-standard voltage divider for Zener check
- *  - standard voltage divider is 10:1 
+ *  - standard voltage divider is 10:1
  *  - ZENER_R1: top resistor in Ohms
  *  - ZENER_R2: bottom resistor in Ohms
  *  - uncomment to enable and adjust resistor values
@@ -197,7 +197,7 @@
  *  - uses T0 directly as counter input
  *  - uncomment to enable
  *  - select the pulse output: either dedicated pin or probes
- *  - see RINGTESTER_PORT in config-<MCU>.h for dedicated pin 
+ *  - see RINGTESTER_PORT in config-<MCU>.h for dedicated pin
  */
 
 //#define HW_RING_TESTER
@@ -270,7 +270,7 @@
 
 /*
  *  L/C meter: also display frequency of LC oscillator
- *  - helps to spot the oscillator's frequency drifting 
+ *  - helps to spot the oscillator's frequency drifting
  *  - requires display with more than two text lines
  *  - uncomment to enable
  */
@@ -390,7 +390,7 @@
  *  - uncomment to enable
  */
 
-//#define SW_ESR_TOOL
+#define SW_ESR_TOOL
 
 
 /*
@@ -505,7 +505,7 @@
 
 
 /*
- *  DS18B20 - OneWire temperature sensor 
+ *  DS18B20 - OneWire temperature sensor
  *  - uncomment to enable
  *  - also enable ONEWIRE_PROBES or ONEWIRE_IO_PIN (see section 'Busses')
  */
@@ -539,7 +539,7 @@
  *  - uncomment to enable
  */
 
-//#define SW_CAP_LEAKAGE
+#define SW_CAP_LEAKAGE
 
 
 /*
@@ -569,10 +569,10 @@
  *  - uncomment to enable (one or more)
  */
 
-//#define SW_MONITOR_R          /* just R */
-//#define SW_MONITOR_C          /* just C plus ESR */
-//#define SW_MONITOR_L          /* just L */
-//#define SW_MONITOR_RCL        /* R plus L, or C plus ESR */
+#define SW_MONITOR_R          /* just R */
+#define SW_MONITOR_C          /* just C plus ESR */
+#define SW_MONITOR_L          /* just L */
+#define SW_MONITOR_RCL        /* R plus L, or C plus ESR */
 //#define SW_MONITOR_RL         /* R plus L */
 
 
@@ -660,7 +660,7 @@
 
 
 /* ************************************************************************
- *   workarounds for some IDEs 
+ *   workarounds for some IDEs
  * ************************************************************************ */
 
 
@@ -795,7 +795,7 @@
  *  Control tester via TTL serial interface.
  *  - uncomment to enable
  *  - also enable SERIAL_BITBANG or SERIAL_HARDWARE, plus SERIAL_RW
- *    (see section 'Busses') 
+ *    (see section 'Busses')
  */
 
 //#define UI_SERIAL_COMMANDS
@@ -852,7 +852,7 @@
 
 
 /*
- *  failed test run: display question mark symbol 
+ *  failed test run: display question mark symbol
  *  - requires component symbols (SW_SYMBOLS) to be enabled
  *  - uncomment to enable
  */
@@ -975,7 +975,7 @@
 /*
  *  Round some values if appropriate.
  *  - for
- *    - DS18B20 (0.1 °C/F)
+ *    - DS18B20 (0.1 ï¿½C/F)
  *  - uncomment to enable
  */
 
@@ -987,7 +987,7 @@
  *  - self-adjustment data is always stored in EEPROM
  *  - fonts and symbols are always stored in Flash
  *  - uncomment one
- */ 
+ */
 
 #define DATA_EEPROM           /* store data in EEPROM */
 //#define DATA_FLASH            /* store data in Flash */
@@ -1002,7 +1002,7 @@
 /*
  *  type of power switch
  *  - soft-latching power switch (default)
- *    - as in the tester's reference circuit 
+ *    - as in the tester's reference circuit
  *    - tester is able to power itself off
  *  - manual power switch
  *    - tester isn't able to power itself off
@@ -1036,7 +1036,7 @@
  *  - uncomment to enable
  */
 
-//#define BAT_EXT_UNMONITORED
+#define BAT_EXT_UNMONITORED
 
 
 /*
@@ -1046,8 +1046,8 @@
  *  - standard values are: R1=10k, R2=3.3k
  */
 
-#define BAT_R1           10000
-#define BAT_R2           3300
+#define BAT_R1           47000
+#define BAT_R2           47000
 
 
 /*
@@ -1056,9 +1056,9 @@
  *  - or any other circuitry in the power section
  *  - Get your DMM and measure the voltage drop!
  *  - Schottky diode about 200mV / PNP BJT about 100mV.
- */  
+ */
 
-#define BAT_OFFSET       290
+#define BAT_OFFSET       420
 
 
 /*
@@ -1076,7 +1076,7 @@
  *  - Voltage drop BAT_OFFSET is considered in calculation.
  */
 
-#define BAT_LOW          6400 
+#define BAT_LOW          6400
 
 
 /*
@@ -1094,7 +1094,7 @@
 
 
 /*
- *  ADC voltage reference based on Vcc (in mV). 
+ *  ADC voltage reference based on Vcc (in mV).
  */
 
 #define UREF_VCC         5001
@@ -1125,7 +1125,7 @@
 
 
 /*
- *  Offset for systematic error of resistor measurement with Rh (470k) 
+ *  Offset for systematic error of resistor measurement with Rh (470k)
  *  in Ohms.
  *  - if resistors >20k measure too high or low adjust the offset accordingly
  *  - standard offset is 350 Ohms
@@ -1154,7 +1154,7 @@
 //#define R_MULTIOFFSET
 
 
-/* 
+/*
  *  Capacitance of probes (in pF).
  *  - default offset for MCU, PCB tracks and probe leads
  *  - Examples:
@@ -1191,12 +1191,12 @@
  *  Correction factors for capacitors (in 0.1%)
  *  - positive factor increases capacitance value
  *    negative factor decreases capacitance value
- *  - CAP_FACTOR_SMALL for caps < 4.7µF
- *  - CAP_FACTOR_MID for caps 4.7 - 47µF
- *  - CAP_FACTOR_LARGE for caps > 47µF
+ *  - CAP_FACTOR_SMALL for caps < 4.7ï¿½F
+ *  - CAP_FACTOR_MID for caps 4.7 - 47ï¿½F
+ *  - CAP_FACTOR_LARGE for caps > 47ï¿½F
  */
 
-#define CAP_FACTOR_SMALL      0      /* no correction */ 
+#define CAP_FACTOR_SMALL      0      /* no correction */
 #define CAP_FACTOR_MID        -40    /* -4.0% */
 #define CAP_FACTOR_LARGE      -90    /* -9.0% */
 
@@ -1366,7 +1366,7 @@
 
 
 /*
- *  ADC clock 
+ *  ADC clock
  *  - The ADC clock is 125000Hz by default.
  *  - You could also set 250000Hz, but that exceeds the max. ADC clock
  *    of 200kHz for 10 bit resolution!
@@ -1390,7 +1390,7 @@
 
 /* 1MHz/250kHz */
 #if CPU_FREQ / ADC_FREQ == 4
-  #define ADC_CLOCK_DIV (1 << ADPS1) 
+  #define ADC_CLOCK_DIV (1 << ADPS1)
 #endif
 
 /* 1MHz/125kHz 2MHz/250kHz */
@@ -1426,7 +1426,7 @@
 
 
 /*
- *  number of MCU cycles per µs
+ *  number of MCU cycles per ï¿½s
  *  - min. 1 (for 1MHz)
  *  - max. 20 (for 20MHz)
  */
@@ -1438,7 +1438,7 @@
  *  number of MCU cycles per ADC cycle
  *  - min. 4
  *  - max. 128
- */ 
+ */
 
 #define MCU_CYCLES_PER_ADC    (CPU_FREQ / ADC_FREQ)
 
@@ -1507,7 +1507,7 @@
   /* PWM+ */
   #ifdef SW_PWM_PLUS
     #undef SW_PWM_PLUS
-    #define SW_PWM_SIMPLE   
+    #define SW_PWM_SIMPLE
   #endif
 
   /* squarewave generator */
@@ -1659,7 +1659,7 @@
   #endif
   #ifdef UI_SERIAL_COMMANDS
     #undef UI_SERIAL_COMMANDS
-  #endif  
+  #endif
 #endif
 
 /* options which require TTL serial */

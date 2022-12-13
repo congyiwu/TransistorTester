@@ -2,7 +2,7 @@
 #  Makefile
 #
 #  (c) 2012-2021 by Markus Reschke
-#  based on code from Markus Frejek and Karl-Heinz Kübbeler
+#  based on code from Markus Frejek and Karl-Heinz Kï¿½bbeler
 #
 
 PROJECT = ComponentTester
@@ -84,9 +84,9 @@ PARTNO = m328p
 #OPTIONS = -B 10.0
 
 # Diamex ALL-AVR/AVR-Prog
-PROGRAMMER = avrispmkII
-PORT = usb
-OPTIONS = -B 1.0
+# PROGRAMMER = avrispmkII
+# PORT = usb
+# OPTIONS = -B 1.0
 
 # Pololu USB AVR Programmer
 #PROGRAMMER = stk500v2
@@ -94,9 +94,9 @@ OPTIONS = -B 1.0
 #OPTIONS = -B 1.0
 
 # USBasp
-#PROGRAMMER = usbasp
-#PORT = usb
-#OPTIONS = -B 20
+PROGRAMMER = usbasp
+PORT = usb
+OPTIONS = -B 20
 
 # USBtinyISP
 #PROGRAMMER = usbtiny
